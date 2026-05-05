@@ -1,20 +1,19 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="Media & Entertainment Landing Zone Logo" />
+<img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="Media & Entertainment LZ Logo" />
 
-<h1>Media & Entertainment Landing Zone Platform</h1>
+<h1>Media & Entertainment Landing Zone</h1>
 
-<p><strong>The Institutional-Grade Platform for Content Ingestion, Multi-Format Transcoding, and Global Streaming Orchestration</strong></p>
+<p><strong>The Institutional-Grade Platform for Content Ingestion, Multi-Format Transcoding, and Global Streaming Orchestration.</strong></p>
 
-[![Standard: Streaming--Scale](https://img.shields.io/badge/Standard-Streaming--Scale-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Distribution: Global--Multi--CDN](https://img.shields.io/badge/Distribution-Global--Multi--CDN-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Security: DRM--Protected](https://img.shields.io/badge/Security-DRM--Protected-gold.svg?style=for-the-badge&labelColor=000000)]()
+[![Standard: Media-Supply-Chain-Excellence](https://img.shields.io/badge/Standard-Media--Supply--Chain--Excellence-indigo.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Streaming--Scalability](https://img.shields.io/badge/Focus-Streaming--Scalability-blue.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
 > **"Content is king, but distribution is the architect."** 
-> Media & Entertainment Landing Zone is a flagship solution for Media Engineering, Streaming Platform, and Content Operations leaders. By orchestrating global content ingestion, multi-format transcoding pipelines, and multi-CDN distribution patterns, it enables organizations to deliver premium viewing experiences with institutional-scale reliability.
+> **Media & Entertainment Landing Zone** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global media operations. It orchestrates the complex lifecycle of content—from high-performance ingestion and distributed transcoding to secure edge delivery and unified media governance.
 
 </div>
 
@@ -22,622 +21,262 @@
 
 ## 🏛️ Executive Summary
 
-The **Media & Entertainment Landing Zone Platform** is a specialized flagship solution designed for Streaming Platforms, Media Conglomerates, and OTT Providers. As the global demand for high-quality video content (4K, Live, VOD) explodes, organizations face the massive challenge of managing complex media supply chains—from raw asset ingestion to edge delivery—across multi-cloud environments. This platform addresses the complexity of media asset management (MAM), transcoding orchestration, and DRM enforcement using a scalable, cloud-native framework.
+Fragmented media assets and manual transcoding workflows are strategic operational liabilities; lack of centralized media orchestration is a primary barrier to organizational content scaling. Organizations fail to achieve rapid media delivery not because of a lack of creativity, but because of fragmented data standards, lack of automated supply chain planning, and an inability to orchestrate media assets with operational precision.
 
-This platform provides a **Unified Media Supply Chain Plane**. It demonstrates how to orchestrate institutional streaming—using **FastAPI**, **React 18**, **FFmpeg**, and **Multi-CDN Patterns**—to create a "Reliability-First" content culture. By providing **Adaptive Bitrate Transcoding**, **Viewer Personalization**, and **Monetization Analytics**, it enables organizations to move from "Linear Content" to "Interactive Digital Experiences."
-
----
-
-## 📉 The "Media Supply Chain" Problem
-
-Enterprises scaling digital media operations face existential challenges:
-- **Transcoding Bottlenecks**: Inability to rapidly process and package raw assets into multiple ABR formats (HLS/DASH) for diverse device ecosystems.
-- **Distribution Latency**: High-risk dependency on single-provider CDNs, leading to buffering and outages during regional congestion or provider failures.
-- **DRM & Rights Complexity**: Fragmented management of content protection (Widevine, FairPlay, PlayReady) and licensing rights across global markets.
-- **Analytics Blind Spots**: Lack of real-time visibility into viewer Quality of Experience (QoE) and monetization performance across platforms.
+This platform provides the **Content Intelligence Plane**. It implements a complete **Enterprise Media-as-Code Framework**, enabling Media Engineering and Operations teams to manage global content lifecycles as first-class citizens. By automating the ingestion of high-fidelity mezzanine files and orchestrating real-time DRM packaging, we ensure that every organizational asset—from live sports broadcasts to 4K VOD libraries—is processed by default, audited for history, and strictly aligned with institutional digital rights management frameworks.
 
 ---
 
-## 🚀 Strategic Drivers & Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Drivers
-- **Multi-Format Orchestration**: Automating the lifecycle of content from ingestion to multi-format distribution (4K, HD, SD).
-- **Multi-CDN Distribution**: Implementing a resilient, provider-agnostic distribution strategy to ensure zero-buffering experiences globally.
-- **Content Governance & DRM**: Enforcing rigorous content protection and licensing governance at the point of distribution.
+### 1. Principal Architecture: Global Media & Entertainment Landing Zone & Content Intelligence Plane
+This diagram illustrates the end-to-end flow from high-performance ingestion and automated transcoding to DRM packaging, global edge delivery, and institutional media auditing.
 
-### 💰 Business Outcomes
-- **99.99% Streaming Reliability**: Through multi-region origin failover and multi-CDN traffic steering.
-- **40% Reduction in Time-to-Market**: By automating the media ingestion and transcoding pipelines.
-- **Institutional Compliance**: Ensuring adherence to copyright, GDPR, and regional content regulations through automated metadata enrichment.
+```mermaid
+graph LR
+    %% Subgraph Definitions
+    subgraph ContentIngestion["High-Performance Content Ingress"]
+        direction TB
+        DirectConnect["Direct Connect / ExpressRoute"]
+        S3Bucket["Raw Mezzanine Storage (S3)"]
+        UploadPortal["Production Upload Portal"]
+    end
+
+    subgraph IntelligenceEngine["Content Intelligence Hub"]
+        direction TB
+        API["FastAPI Media Gateway"]
+        MAM["Media Asset Manager (MAM)"]
+        TranscodeOrch["Transcoding Orchestrator"]
+        DRMPackager["DRM & Packaging Engine"]
+    end
+
+    subgraph ProcessingPlane["Distributed Processing Fleet"]
+        direction TB
+        RenderingFarm["Distributed Rendering Farm"]
+        TranscodeWorkers["FFmpeg Transcode Workers"]
+        AITagging["AI Content Tagging Bot"]
+    end
+
+    subgraph OperationsHub["Institutional Media Hub"]
+        direction TB
+        Scorecard["Media Maturity Score"]
+        Analytics["Ingestion & Delivery Stats"]
+        Audit["Forensic Media Metadata Lake"]
+    end
+
+    subgraph DevOps["Media-as-Code Orchestration"]
+        direction TB
+        TF["Terraform Media Modules"]
+        CDNConfig["Multi-CDN Traffic Steering"]
+        ChatOps["Release Approval Hub"]
+    end
+
+    %% Flow Arrows
+    ContentIngestion -->|1. Submit Mezzanine| API
+    API -->|2. Register Asset| MAM
+    MAM -->|3. Trigger Transcode| TranscodeOrch
+    TranscodeOrch -->|4. Orchestrate Rendering| ProcessingPlane
+    
+    ProcessingPlane -->|5. Package Content| DRMPackager
+    DRMPackager -->|6. Deliver to Edge| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track QoE| Analytics
+    Scorecard -->|9. Record Event| Audit
+    
+    TF -->|10. Provision Hub| IntelligenceEngine
+    CDNConfig -->|11. Route Traffic| ChatOps
+    Audit -->|12. Improve Models| TranscodeOrch
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef processing fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class ContentIngestion ingress;
+    class IntelligenceEngine intel;
+    class ProcessingPlane processing;
+    class OperationsHub ops;
+    class DevOps devops;
+```
+
+### 2. The Media Supply Chain Lifecycle Flow
+The continuous path of a media asset from initial ingestion and processing to active transcoding, packaging, delivery, and institutional forensic auditing.
+
+```mermaid
+graph LR
+    Ingest["Ingest Asset"] --> Process["AI Process"]
+    Process --> Transcode["Transcode & Pack"]
+    Transcode --> Deliver["Edge Deliver"]
+    Deliver --> Audit["Forensic Audit"]
+```
+
+### 3. High-Performance Content Ingestion Topology
+Strategically receiving large raw media mezzanine files via dedicated low-latency pathways (Direct Connect / ExpressRoute) to ensure production deadlines are met without public internet jitter.
+
+```mermaid
+graph LR
+    Source["Production House"] --> Path["Dedicated Fibre Path"]
+    Path --> Ingress["High-Throughput Ingress S3"]
+    Ingress --- Trigger["Automated Supply Chain Trigger"]
+```
+
+### 4. Distributed Transcoding & Rendering Farm Flow
+Orchestrating large-scale rendering and transcoding tasks across distributed spot instance fleets, maximizing throughput while minimizing compute unit costs for 4K/8K content.
+
+```mermaid
+graph TD
+    Queue["Transcoding Job Queue"] --> Scheduler["Spot Instance Orchestrator"]
+    Scheduler --> Worker1["Transcode Worker A"]
+    Scheduler --> Worker2["Transcode Worker B"]
+    Worker1 --- Output["ABR Segment Storage"]
+```
+
+### 5. Digital Asset Management (DAM) & Metadata Flow
+Automatically categorizing and indexing high-volume media assets with AI-generated metadata (tags, facial recognition, speech-to-text) to enable instant institutional search.
+
+```mermaid
+graph LR
+    Asset["Processed Video"] --> AI["AI Meta Bot"]
+    AI --> Index["ElasticSearch Index"]
+    Index --> Search["Media Search Portal"]
+    Search --- User["Content Producer"]
+```
+
+### 6. Edge Content Delivery (CDN) & DRM Flow
+Securing and delivering content globally through multi-CDN traffic steering and real-time DRM (Widevine, FairPlay) license enforcement at the viewing point.
+
+```mermaid
+graph LR
+    Origin["Content Origin (S3)"] --> CDN["Multi-CDN Hub"]
+    CDN -->|Verify| DRM["DRM License Server"]
+    DRM -->|Authorize| Viewer["End-User Device"]
+    Viewer --- Stats["QoE Analytics Hub"]
+```
+
+### 7. Institutional Media Maturity Scorecard
+Grading organizational performance based on key indicators: Ingestion-to-Live Latency, Transcoding Cost ROI, and Delivery Uptime.
+
+```mermaid
+graph TD
+    Post["Media Health: 95%"] --> Risk["Delivery Lag: 5%"]
+    Post --- C1["Ingest Speed (99%)"]
+    Post --- C2["DRM Coverage (100%)"]
+```
+
+### 8. Identity & RBAC for Media Governance
+Managing fine-grained access to raw production assets, transcoding settings, and monetization dashboards between Producers, Media Engineers, and Rights Managers.
+
+```mermaid
+graph TD
+    Producer["Content Producer"] --> Hub["Manage Production Assets"]
+    Engineer["Media Engineer"] --> Trans["Manage Transcoding"]
+    Manager["Rights Manager"] --> DRM["Manage DRM Policies"]
+```
+
+### 9. IaC Deployment: Media-LZ-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the media tracking hubs, rendering farms, and forensic metadata lakes.
+
+```mermaid
+graph LR
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Media Control Plane"]
+    Engine --> Clusters["HA Rendering Fleet"]
+```
+
+### 10. AIOps Content Quality & Drift Validation Flow
+Using advanced analytics to identify video artifacts (black frames, audio sync issues) or metadata mismatches during the automated supply chain process.
+
+```mermaid
+graph LR
+    Video["Processed Video"] --> Analyzer["Quality Validation Bot"]
+    Analyzer -->|Artifact| Alert["QA Rejection Alert"]
+    Analyzer -->|Passed| Pass["Safe for Distribution"]
+```
+
+### 11. Metadata Lake for Forensic Media Audit
+Storing long-term records of every asset ingested, every transcoding decision, and every delivery event for institutional record-keeping and compliance auditing.
+
+```mermaid
+graph LR
+    Asset["Media Asset"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Media Metadata Lake"]
+    Lake --> Trends["Content Delivery Trends"]
+```
 
 ---
 
-## 📐 Architecture Storytelling: 80+ Advanced Diagrams
-
-### 1. Executive Media Supply Chain Architecture
-*The orchestration of Ingestion, Transcoding, and Global Distribution.*
-```mermaid
-graph TD
-    subgraph "Ingestion & MAM (Origin)"
-        Portal[Media Hub]
-        Ingest[Ingestion Engine]
-        Storage[Object Store: S3/Blob]
-        MAM[Asset Registry]
-    end
-
-    subgraph "Processing Tier (Workers)"
-        Transcode[Transcoding Engine]
-        Metadata[AI Enrichment]
-        DRM[DRM Packaging]
-    end
-
-    subgraph "Distribution Tier (Edge)"
-        Origin[Origin Cache]
-        CDN1[Multi-CDN: CloudFront]
-        CDN2[Multi-CDN: Akamai]
-    end
-
-    Portal --> Ingest
-    Ingest --> Storage
-    Storage --> Transcode
-    Transcode --> DRM
-    DRM --> Metadata
-    Metadata --> Storage
-    Storage --> Origin
-    Origin --> CDN1
-    Origin --> CDN2
-    CDN1 --> Viewer[Viewer Device]
-    CDN2 --> Viewer
-```
-
-### 2. Adaptive Bitrate (ABR) Transcoding Lifecycle
-*From raw mezzanine to multi-quality HLS/DASH.*
-```mermaid
-sequenceDiagram
-    participant Ingest as Ingestion Worker
-    participant Proc as Transcoding Worker (FFmpeg)
-    participant Pack as Packaging Engine
-    participant Store as Delivery Storage
-
-    Ingest->>Proc: Mezzanine Asset (ProRes/4K)
-    Proc->>Proc: Transcode: 2160p (15 Mbps)
-    Proc->>Proc: Transcode: 1080p (6 Mbps)
-    Proc->>Proc: Transcode: 720p (3 Mbps)
-    Proc->>Pack: Generate HLS Manifests (.m3u8)
-    Proc->>Pack: Generate DASH Manifests (.mpd)
-    Pack->>Store: Upload Segments (.ts / .m4s)
-```
-
-### 3. Multi-CDN Traffic Steering Logic
-*Ensuring the best viewer experience through intelligent routing.*
-```mermaid
-graph TD
-    Viewer[Viewer Request] --> DNS[Global DNS Hub]
-    DNS --> Health[CDN Health Check]
-    Health -->|Region: EU, Load: Low| CDN1[CDN Provider A]
-    Health -->|Region: US, Load: High| CDN2[CDN Provider B]
-    CDN1 --> Cache[Edge Content]
-    CDN2 --> Cache
-```
-
-### 4. DRM & Content Protection Flow
-```mermaid
-graph LR
-    Asset[Mezzanine Content] --> Key[DRM Key Provider]
-    Key --> Encrypt[AES-128 Encryption]
-    Encrypt --> Pack[HLS / DASH Package]
-    Pack --> License[License Server (Widevine/FairPlay)]
-    License --> Viewer[Secure Playback]
-```
-
-### 5. Content Metadata Enrichment Loop
-```mermaid
-graph LR
-    Asset[Raw Video] --> AI[AI Processing]
-    AI --> Faces[Face Detection]
-    AI --> Audio[Speech-to-Text]
-    AI --> Scene[Scene Tagging]
-    Scene --> Metadata[Asset Meta Store]
-```
-
-### 6. Live Streaming Orchestration Flow
-```mermaid
-graph TD
-    Live[Live Event Feed] --> Encoder[Cloud Encoder]
-    Encoder --> Origin[Origin Server]
-    Origin --> CDN[Global CDN]
-    CDN --> Viewer[Live Playback]
-```
-
-### 7. Viewer Personalization Engine
-```mermaid
-graph LR
-    History[Watch History] --> ML[Recommendation Engine]
-    ML --> UI[Personalized Feed]
-    UI --> Viewer[Discovery Experience]
-```
-
-### 8. Ad-Insertion (SSAI) Workflow
-```mermaid
-graph LR
-    Content[Video Segment] --> AdServer[Ad Decision Server]
-    AdServer --> Stitch[Manifest Stitcher]
-    Stitch --> Final[ABR Stream with Ads]
-```
-
-### 9. Content Lifecycle Automation
-```mermaid
-graph LR
-    New[New Release] --> Active[Active Cache (S3)]
-    Active --> Archive[Archival Store (Glacier)]
-    Note right of Archive: Trigger after 90 days
-```
-
-### 10. Multi-Region Origin Failover
-```mermaid
-graph TD
-    Primary[Region: us-east-1] --> Healthy{Healthy?}
-    Healthy -->|No| Secondary[Region: eu-west-1]
-    Secondary --> CDN[Global CDN Distribution]
-```
-
-### 11. Media ingestion flow
-```mermaid
-graph LR
-    M[Medi] --> I[Inge]
-```
-
-### 12. Transcoding pipeline logic
-```mermaid
-graph LR
-    T[Tran] --> P[Pipe]
-```
-
-### 13. CDN distribution flow
-```mermaid
-graph LR
-    C[CDN] --> D[Dist]
-```
-
-### 14. Streaming analytics flow
-```mermaid
-graph LR
-    S[Stre] --> A[Anal]
-```
-
-### 15. Viewer behavior tracking
-```mermaid
-graph LR
-    V[View] --> B[Beha]
-```
-
-### 16. Content lifecycle automation
-```mermaid
-graph LR
-    C[Cont] --> L[Life]
-```
-
-### 17. Metadata enrichment flow
-```mermaid
-graph LR
-    M[Meta] --> E[Enri]
-```
-
-### 18. AI/ML media processing
-```mermaid
-graph LR
-    A[AIML] --> P[Proc]
-```
-
-### 19. Rights & licensing hub
-```mermaid
-graph LR
-    R[Righ] --> L[Lice]
-```
-
-### 20. DRM enforcement flow
-```mermaid
-graph LR
-    D[DRM] --> E[Enfo]
-```
-
-### 21. OTT platform integration
-```mermaid
-graph LR
-    O[OTT] --> I[Inte]
-```
-
-### 22. Personalization engine flow
-```mermaid
-graph LR
-    P[Pers] --> E[Engi]
-```
-
-### 23. Advertising integration flow
-```mermaid
-graph LR
-    A[Adve] --> I[Inte]
-```
-
-### 24. Live event streaming
-```mermaid
-graph LR
-    L[Live] --> E[Even]
-```
-
-### 25. Low-latency architecture
-```mermaid
-graph LR
-    L[LowL] --> A[Arch]
-```
-
-### 26. Edge delivery optimization
-```mermaid
-graph LR
-    E[Edge] --> D[Deli]
-```
-
-### 27. Multi-tenant media platform
-```mermaid
-graph LR
-    M[Mult] --> T[Tena]
-```
-
-### 28. Media compliance flow
-```mermaid
-graph LR
-    M[Medi] --> C[Comp]
-```
-
-### 29. Disaster recovery: Media
-```mermaid
-graph LR
-    D[Disa] --> R[Reco]
-```
-
-### 30. Ingestion engine flow
-```mermaid
-graph LR
-    I[Inge] --> E[Engi]
-```
-
-### 31. Transcoding engine flow
-```mermaid
-graph LR
-    T[Tran] --> E[Engi]
-```
-
-### 32. Distribution engine flow
-```mermaid
-graph LR
-    D[Dist] --> E[Engi]
-```
-
-### 33. Analytics engine flow
-```mermaid
-graph LR
-    A[Anal] --> E[Engi]
-```
-
-### 34. Asset metadata flow
-```mermaid
-graph LR
-    A[Asse] --> M[Meta]
-```
-
-### 35. Streaming pipeline flow
-```mermaid
-graph LR
-    S[Stre] --> P[Pipe]
-```
-
-### 36. DRM packaging flow
-```mermaid
-graph LR
-    D[DRM] --> P[Pack]
-```
-
-### 37. Multi-CDN integration
-```mermaid
-graph LR
-    M[Mult] --> C[CDN]
-```
-
-### 38. Advertising workflow
-```mermaid
-graph LR
-    A[Adve] --> W[Work]
-```
-
-### 39. AI/ML tagging flow
-```mermaid
-graph LR
-    A[AIML] --> T[Tagg]
-```
-
-### 40. Content security policy
-```mermaid
-graph LR
-    C[Cont] --> S[Secu]
-```
-
-### 41. Licensing governance flow
-```mermaid
-graph LR
-    L[Lice] --> G[Govn]
-```
-
-### 42. Compliance audit trail
-```mermaid
-graph LR
-    C[Comp] --> A[Audi]
-```
-
-### 43. Infrastructure: Storage
-```mermaid
-graph LR
-    I[Infr] --> S[Stor]
-```
-
-### 44. Infrastructure: CDN
-```mermaid
-graph LR
-    I[Infr] --> C[CDN]
-```
-
-### 45. Infrastructure: Network
-```mermaid
-graph LR
-    I[Infr] --> N[Netw]
-```
-
-### 46. Monitoring: Prometheus
-```mermaid
-graph LR
-    M[Moni] --> P[Prom]
-```
-
-### 47. Monitoring: Grafana
-```mermaid
-graph LR
-    M[Moni] --> G[Graf]
-```
-
-### 48. Monitoring: Alerts
-```mermaid
-graph LR
-    M[Moni] --> A[Aler]
-```
-
-### 49. CI/CD: Build pipeline
-```mermaid
-graph LR
-    C[CICD] --> B[Buil]
-```
-
-### 50. CI/CD: Test pipeline
-```mermaid
-graph LR
-    C[CICD] --> T[Test]
-```
-
-### 51. CI/CD: Deploy pipeline
-```mermaid
-graph LR
-    C[CICD] --> D[Depl]
-```
-
-### 52. Media UI: Operations
-```mermaid
-graph LR
-    U[UI] --> O[Oper]
-```
-
-### 53. Media UI: Ingestion
-```mermaid
-graph LR
-    U[UI] --> I[Inge]
-```
-
-### 54. Media UI: Analytics
-```mermaid
-graph LR
-    U[UI] --> A[Anal]
-```
-
-### 55. Media UI: Distribution
-```mermaid
-graph LR
-    U[UI] --> D[Dist]
-```
-
-### 56. API: Asset listing
-```mermaid
-graph LR
-    A[API] --> A[Asse]
-```
-
-### 57. API: Ingest trigger
-```mermaid
-graph LR
-    A[API] --> I[Inge]
-```
-
-### 58. API: Streaming status
-```mermaid
-graph LR
-    A[API] --> S[Stre]
-```
-
-### 59. API: Analytics fetch
-```mermaid
-graph LR
-    A[API] --> A[Anal]
-```
-
-### 60. Worker: Ingestion
-```mermaid
-graph LR
-    W[Work] --> I[Inge]
-```
-
-### 61. Worker: Transcoding
-```mermaid
-graph LR
-    W[Work] --> T[Tran]
-```
-
-### 62. Worker: Distribution
-```mermaid
-graph LR
-    W[Work] --> D[Dist]
-```
-
-### 63. Worker: Analytics
-```mermaid
-graph LR
-    W[Work] --> A[Anal]
-```
-
-### 64. Worker: Notification
-```mermaid
-graph LR
-    W[Work] --> N[Noti]
-```
-
-### 65. FFmpeg transcoding loop
-```mermaid
-graph LR
-    F[FFmp] --> T[Tran]
-```
-
-### 66. ABR segment generation
-```mermaid
-graph LR
-    A[ABR] --> S[Segm]
-```
-
-### 67. HLS manifest update
-```mermaid
-graph LR
-    H[HLS] --> M[Mani]
-```
-
-### 68. DRM key exchange
-```mermaid
-graph LR
-    D[DRM] --> K[KeyE]
-```
-
-### 69. CDN cache invalidation
-```mermaid
-graph LR
-    C[CDN] --> I[Inva]
-```
-
-### 70. Viewer QoE tracking
-```mermaid
-graph LR
-    V[View] --> Q[QoE]
-```
-
-### 71. Monetization dashboard
-```mermaid
-graph LR
-    M[Mone] --> D[Dash]
-```
-
-### 72. Transformation roadmap
-```mermaid
-graph LR
-    T[Tran] --> R[Road]
-```
-
-### 73. Value realization model
-```mermaid
-graph LR
-    V[Valu] --> R[Real]
-```
-
-### 74. Institutional maturity
-```mermaid
-graph LR
-    I[Inst] --> M[Matu]
-```
-
-### 75. Evidence collection flow
-```mermaid
-graph LR
-    E[Evid] --> C[Coll]
-```
-
-### 76. Compliance audit trail
-```mermaid
-graph LR
-    C[Comp] --> A[Audi]
-```
-
-### 77. Strategy execution loop
-```mermaid
-graph LR
-    S[Stra] --> E[Exec]
-```
-
-### 78. Media ecosystem map
-```mermaid
-graph LR
-    M[Medi] --> E[Ecos]
-```
-
-### 79. Supply chain workflow
-```mermaid
-graph LR
-    S[Supp] --> W[Work]
-```
-
-### 80. Content blueprint
-```mermaid
-graph LR
-    C[Cont] --> B[Blue]
-```
+## 🏛️ Core Media Pillars
+
+1.  **Unified Supply Chain Orchestration**: Maximizing delivery speed by automating the full ingestion-to-distribution lifecycle.
+2.  **High-Precision Transcoding Control**: Delivering premium quality across all device types through automated ABR packaging.
+3.  **Geo-Distributed Edge Resiliency**: Minimizing buffering through intelligent multi-CDN traffic steering.
+4.  **Zero-Trust Content Protection**: Securing high-value intellectual property through real-time DRM enforcement.
+5.  **Autonomous Metadata Enrichment**: Enabling global asset discoverability through AI-driven tagging and indexing.
+6.  **Full Media Auditability**: Immutable recording of every asset transformation and delivery event for institutional forensics.
 
 ---
 
 ## 🛠️ Technical Stack & Implementation
 
-### Media Supply Chain Orchestration
-- **Ingestion & MAM**: Python 3.11+ / FastAPI / Celery.
-- **Transcoding**: FFmpeg (Transcoding), Shaka Packager (DRM Packaging).
-- **Backend**: PostgreSQL (Asset Metadata), Redis (Job Queue).
+### Media Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Transcoding Core**: FFmpeg and Shaka Packager integration for ABR and DRM.
+*   **MAM Hub**: Custom Python-based asset registry with PostgreSQL backend.
+*   **Persistence**: PostgreSQL (Metadata Lake) and Redis (Live Job Queue).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege media asset access.
 
-### Frontend (Content Hub)
-- **Framework**: React 18 / Vite
-- **Visuals**: Recharts (Streaming Throughput, Concurrent Viewers, QoE Metrics).
-- **Theme**: Dark, Purple, and Indigo (Institutional Media Aesthetics).
+### Content Intelligence Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Purple, Slate (Modern high-fidelity media aesthetic).
+*   **Visualization**: Recharts for streaming throughput, concurrent viewer counts, and QoE analytics.
 
-### Infrastructure
-- **Cloud**: AWS S3 (Origin Storage), CloudFront (CDN), EKS (Runtime).
-- **IaC**: Terraform (Networking, S3, CDN, IAM).
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS).
+*   **Storage Plane**: High-performance object storage (S3/GCS) with global replication.
+*   **IaC**: Modular Terraform for deploying the media landing zone and processing fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/media_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/rendering`** | Distributed processing fleet | Spot EC2, Lambda, FFmpeg |
+| **`infrastructure/cdn`** | Edge distribution & DRM | CloudFront, Akamai, Widevine |
+| **`infrastructure/auditing`** | Forensic media sinks | S3, Athena, Quicksight |
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Local Development
+### Local Principal Environment
 ```bash
-# Clone the repository
+# Clone the media platform
 git clone https://github.com/devopstrio/media-entertainment-lz.git
 cd media-entertainment-lz
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Launch services
-make up
+# Launch the Media stack
+make init
+
+# Trigger a mock media ingestion and transcoding simulation
+make simulate-media
 ```
-Access the Content Operations Hub at `http://localhost:3000`.
+
+Access the Content Intelligence Hub at `http://localhost:3000`.
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
